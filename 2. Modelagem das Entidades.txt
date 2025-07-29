@@ -1,0 +1,23 @@
+2. Modelagem das Entidades
+Crie a entidade Usuario com campos como: id, nome, email, senha, role (ex: USER, ADMIN).
+
+3. Configuração do Spring Security
+Crie uma classe de configuração para definir regras de acesso (permitir acesso a páginas públicas, proteger rotas de admin).
+Implemente o serviço de autenticação (UserDetailsService).
+4. Telas com Thymeleaf
+Crie templates para login, registro, recuperação de senha, dashboard do usuário e admin.
+5. Registro de Usuário
+Implemente o formulário de cadastro e lógica para salvar usuários no banco.
+6. Diferenciação de Perfis
+Use o campo role para diferenciar usuários comuns e admin.
+Proteja rotas usando as anotações do Spring Security.
+7. Recuperação de Senha
+Implemente envio de e-mail para redefinição de senha.
+8. Testes
+Teste o fluxo de login, registro, acesso restrito e recuperação de senha.
+Por onde começar?
+Verifique e ajuste as dependências no pom.xml.
+Crie a entidade Usuario e o repositório JPA.
+Implemente o serviço de autenticação.
+Configure o Spring Security.
+Crie as páginas iniciais com Thymeleaf.

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard do Usuário</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Dashboard do Usuário</h1>
+
+    <p>Aqui você pode visualizar suas informações e gerenciar sua conta.</p>
+    <a href="/logout">Sair</a>
+    
+    <h2>Informações do Usuário</h2>
+    <ul>
+        <li>Email: <span th:text="${usuario.email}">
+            </span></li>
+        <li>Nome: <span th:text="${usuario.nome}">
+            </span></li>        
+        <li>Data de Registro: <span th:text="${#temporals.format(usuario.dataRegistro, 'dd/MM/yyyy')}">
+            </span></li>
+    </ul>
+    <h2>Configurações</h2>
+    <ul>
+        <li><a href="/profile-settings">Configurações do Perfil</a></li>
+    </ul>
+    
+</body>
+</html>
