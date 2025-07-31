@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    background-color: #030303;
+    background-color: #121212;
     color: #ffffff;
     margin: 0;
     padding: 0;
@@ -10,5 +10,26 @@ body {
     align-items: center;
     justify-content: center;
 
-    
+
+}
+
+button,
+a,
+input {
+    font-weight: bold;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInMove 0.7s ease forwards;
+
+}
+
+@keyframes fadeInMove {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

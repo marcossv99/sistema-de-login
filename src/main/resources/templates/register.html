@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
-    <div class="form-container">
-        <h1>Realize seu cadastro</h1>
-        <form th:action="@{/register}" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="Digite seu email">
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
-            <button type="submit">Registrar</button>
-        </form>
-        <a th:href="@{/login}">Já tem uma conta? Faça login</a>
-        <div class="background">Imagem</div>
+    <div class="center-container fade-in">
+        <div class="form-container">
+            <h1>Realize seu cadastro</h1>
+            <form th:action="@{/register}" method="post">
+                <div class="input-icon">
+                    <label for="nome">Nome</label>
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+                </div>
+                <div class="input-icon">
+                    <label for="email">Email</label>
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" required placeholder="Digite seu email">
+                </div>
+                <div class="input-icon">
+                    <label for="senha">Senha</label>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+                </div>
+                <button type="submit" class="register-btn">Registrar</button>
+            </form>
+            <a th:href="@{/login}">Já tem uma conta? Faça login</a>
+        </div>
+        <div class="image-container">
+            <img src="/images/background-login.jpg" alt="Imagem de Cadastro" class="register-image">
+            <p class="side-text">Gerencia acessos de forma prática com o LoginPro!</p>
     </div>
 </body>
+
 </html>

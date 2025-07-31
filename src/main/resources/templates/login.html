@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
-    <h1>Login</h1>
-    <form th:action="@{/login}" method="post">
-        <label for="username">Email:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <button type="submit">Entrar</button>
-    </form>
-    <a th:href="@{/register}">Registrar</a>
-    <a th:href="@{/forgot-password}">Esqueci minha senha</a>
+    <div class="center-container fade-in">
+        <div class="login-container">
+            <h1>Login</h1>
+            <form th:action="@{/login}" method="post">
+                <div class="input-icon">
+                    <label for="username">Email</label>
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" name="username" required placeholder="Digite seu email">
+                </div>
+                <br>
+                <div class="input-icon">
+                    <label for="password">Senha</label>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+                </div>
+                <br>
+                <button type="submit" class="login-btn">Entrar</button>
+            </form>
+            <div class="links-container">
+                <a th:href="@{/register}">Registrar</a>
+                <a th:href="@{/forgot-password}">Esqueci minha senha</a>
+                <p th:if="${param.error}" class="error-message">Usuário ou senha inválidos.</p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
